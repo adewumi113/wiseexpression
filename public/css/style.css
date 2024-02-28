@@ -19,7 +19,7 @@ div{
     padding-bottom: 0.5rem;
     box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.5);
     background: white;
-    max-width: 75%;
+    max-width: 75%
 }
 li{
     border: 1px solid black;
@@ -55,4 +55,26 @@ i{
 }
 .fa-trash:hover::after{
     content: "Delete";
+}
+
+/******************************************
+/* MEDIA QUERY
+/*******************************************/
+
+@media all and (max-width: 600px) {
+    div{
+        max-width: 85%;
+    }
+    li{
+        max-width: 75%;
+    }
+}
+
+@media all and (min-width: 601px) and (max-width: 1025px) {
+    div{
+        max-width: 80%;
+    }
+    li{
+        max-width: 65%;
+    }
 }
