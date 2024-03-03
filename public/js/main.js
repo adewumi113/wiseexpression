@@ -9,6 +9,24 @@ Array.from(likeButtons).forEach((element) => {
     element.addEventListener('click', addLike);
 });
 
+function validateRequiredFields() {
+    const requiredInputs = document.querySelectorAll('.required');
+    for (const input of requiredInputs) {
+        if (input.value.trim() === "") { //!input.value.trim() will also work here
+            alert(`${input.placeholder} is required.`);
+            return false;
+        }
+    }
+    return true;
+}
+
+const form = document.querySelector('#formSubmit');
+    form.addEventListener('submit', function(event) {
+        if (!validateRequiredFields()) {
+            event.preventDefault();
+        }
+    });
+
 async function deleteExpression() {
     const expressionId = getExpressionId(this);
     try {

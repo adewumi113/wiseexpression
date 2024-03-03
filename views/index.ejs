@@ -20,15 +20,15 @@
 
     <h2>Add Expression:</h2>
 
-    <form action="/addExpression" method="POST">
-        <input type="text" placeholder="Contributor Name" name="contributor">
-        <input type="text" placeholder="Expression" name="expression">
+    <form action="/addExpression" method="POST" id="formSubmit">
+        <input type="text" placeholder="Contributor Name" name="contributor" class="required">
+        <input type="text" placeholder="Expression" name="expression" class="required">
         <select name="classification">
             <option value="idiom">Idiom</option>
             <option value="proverb">Proverb</option>
             <option value="quote">Quote</option>
         </select>
-        <input id="explanation" type="text" placeholder="Explanation" name="meaning">
+        <input id="explanation" type="text" placeholder="Explanation" name="explanation" class="required">
         <input type="submit" value="Add yours">
     </form>
 
@@ -38,7 +38,7 @@
             <p>Contributor: <i><%= info[i].contributor %></i></p>
             <p>Expression: <i><%= info[i].expression %></i></p>
             <p>Type: <i><%= info[i].classification %></i></p>
-            <p>Explanation: <i><%= info[i].meaning %></i></p>
+            <p>Explanation: <i><%= info[i].explanation %></i></p>
             <p class='fa fa-heart'></p>
             <span><%= info[i].likes %></span>
             <span class='fa fa-trash'></span>

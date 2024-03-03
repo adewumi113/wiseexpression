@@ -33,7 +33,7 @@ app.post('/addExpression', (request, response) => {
         contributor: request.body.contributor,
         expression: request.body.expression,
         classification: request.body.classification,
-        meaning: request.body.meaning,
+        explanation: request.body.explanation,
         likes: 0
     })
         .then(result => {
